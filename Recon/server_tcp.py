@@ -12,8 +12,8 @@ print(f"Running TCP server on {host}:{port}")
 while True:
     client, address = server.accept()
     print(f"Received connection from {client} {address}")
-    message = "Hello\r\n"
+    message = "Hello!\r\n"
     client.send(message.encode('ascii'))
-    print(f"Send TCP to {client} {address}")
+    print(f"Sent TCP to {client} {address}")
     client.close()
     print(f"Closed TCP with {client} {address}")
